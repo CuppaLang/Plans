@@ -1,5 +1,7 @@
 TODO: represent nodes as JSON instead of functions here
 
+TODO: better wording, what compiling is is too vague here
+
 This file is the concept of how the compiler will look at programs
 
 Let's take this snippet:

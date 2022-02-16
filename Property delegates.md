@@ -17,6 +17,23 @@ myObj.myProperty // = "Hello World!"
 
 // you can also "unpack" properties
 
-(< myObj.myProperty >) // = an instance of Lazy
+< myObj.myProperty > // = an instance of Lazy
 (< myObj.myProperty >).get() // = "Hello World!"
+```
+
+This can also be done with enums
+
+```
+enum MyEnum(val value: string, val extraInfo: string) {
+  Foo("Something here", "I don't know what to put here"),
+  Bar("Something here aswell", "I don't know what to put here either");
+  
+  // pack "value" as this
+  this = > value <
+}
+
+// .....
+
+MyEnum.Foo // = "Something here"
+(< MyEnum.Foo >).extraInfo // = "I don't know what to put here"
 ```
